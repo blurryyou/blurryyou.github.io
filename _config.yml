@@ -10,7 +10,7 @@ relative_permalinks: true
 title:            blurryyou
 tagline:          'Learn the hard way'
 description:      'This site is powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <a href="http://pages.github.com" target="_blank">GitHub Pages</a>, theme from <a href="http://hyde.getpoole.com" target="_blank">Hyde</a>. '
-url:              http://hyde.getpoole.com
+url:              http://blurryyou.github.io
 baseurl:          /
 
 author:
