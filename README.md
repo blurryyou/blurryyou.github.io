@@ -1,44 +1,118 @@
-## TinyBlog有什么特性
-1. 完全静态,以至于没有任何生成程序
-2. 支持Markdown常用语法
-3. 支持Github用户添加评论
+# Hyde
 
-## 为什么要写 TinyBlog
-有时候只想简单的写一篇文章,WordPress毫无疑问过于臃肿,Jekyll需要安装,而我想要一种更简单的更新博客方式,受到开源项目[Simple](https://github.com/isnowfy/simple)的启发,我用几个晚上的时间写了一个极简的静态博客.
+Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-每次写文章只有一个步骤,push写好的md文章到`./blog`目录下, that's all .
-
-## TinyBlog 教程
-1. 从[TinyBlog的Github主页](https://github.com/YangHanqing/tinyblog)fork一份到你的仓库,更改项目名称为`your_name.github.io`,几分钟后Github会自动为你开通[your_name.github.io](yanghanqing.github.io)的个人主页
-
-2. 修改`about me.md`文件作为你的个人介绍,为了更快的加载速度,也可以选择写死在`index.html`中
-
-3. 写好markdown文件后,保存到`./blog`目录下,依次执行下面的语句即可.如果你不熟悉Git如何使用,请参考Github提供的相关教程.
-
-	> git add .
-	> git commit -m "Update blog"
-	> git push
-	
-4. 如果修改了CNAME,记得core.js中把`user`改为自己的账户名,否则通过URL自动获取.
-
-5. 分享文章给他人,可以通过在链接后加如下参数 `?title=文章名`
-
-6. 建议新文章发布后,评论栏留空,并点击一下提交评论按钮,这样会用你自己的账户创建issue,以后如果comment有更新,不会打扰到第一个评论的人.
-
-## 迭代方向
-* 修复未知Bug(没有做测试,也没有考虑Github通讯不佳的情况)
-* 支持响应式布局(第一次写前端,很手生)
-* 基本上整个网站有交互就有AJAX,所以需要美化和增加相应的Loading提示
-* 支持文章按发布时间排序(Github没有获取单独文件update时间的api,所有第一版没有处理,初步想法是通过 `001#TITLE`这样的命名规范来处理文章顺序)
-* 做一个支持MD语法的Chrome扩展来更新博客,不过如果做了扩展,和Jekyll也没什么区别了,再议.
-* 改成 ReactJS 驱动来练练手
-
-## 评论功能
-评论这个功能我是取巧了,利用Github API在项目issues下新建comment来存储,实现了原本需要第三方插件才能完成的功能.
-## 许可
-MIT
-	
+![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
 
+## Contents
+
+- [Usage](#usage)
+- [Options](#options)
+  - [Sidebar menu](#sidebar-menu)
+  - [Sticky sidebar content](#sticky-sidebar-content)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
 
 
+## Usage
+
+Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+
+
+## Options
+
+Hyde includes some customizable options, typically applied via classes on the `<body>` element.
+
+
+### Sidebar menu
+
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+
+```
+---
+layout: page
+title: About
+---
+```
+
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+
+
+### Sticky sidebar content
+
+By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
+
+```html
+<!-- Default sidebar -->
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    ...
+  </div>
+</div>
+
+<!-- Modified sidebar -->
+<div class="sidebar">
+  <div class="container">
+    ...
+  </div>
+</div>
+```
+
+
+### Themes
+
+Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
+
+![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
+
+There are eight themes available at this time.
+
+![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
+
+To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
+
+```html
+<body class="theme-base-08">
+  ...
+</body>
+```
+
+To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
+
+### Reverse layout
+
+![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
+
+Hyde's page orientation can be reversed with a single class.
+
+```html
+<body class="layout-reverse">
+  ...
+</body>
+```
+
+
+## Development
+
+Hyde has two branches, but only one is used for active development.
+
+- `master` for development.  **All pull requests should be submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
+
+
+## Author
+
+**Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
+
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
+
+<3

@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            blurryyou
+tagline:          'Learn the hard way'
+description:      'This site is powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <a href="http://pages.github.com" target="_blank">GitHub Pages</a>, theme from <a href="http://hyde.getpoole.com" target="_blank">Hyde</a>. '
+url:              http://hyde.getpoole.com
+baseurl:          /
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
