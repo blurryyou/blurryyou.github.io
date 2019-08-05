@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 警告：勿谓言之不预？
+title: 警告勿谓言之不预
 featured: true
 tags: [fandom]
 ---
