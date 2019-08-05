@@ -1,14 +1,10 @@
 ```
-
 layout: post
-
 title: 警告：勿谓言之不预？
-
 featured: true
-
 tags: [fandom]
-
 ```
+
 
 
 > 旧文重发以备份。
