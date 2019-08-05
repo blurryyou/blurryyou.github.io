@@ -5,10 +5,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-<<<<<<< Updated upstream
-# Permalinks
-permalink:        pretty
-=======
 # Site settings
 title:       blurryyou
 email:       'blurry.you@gmail.com'
@@ -19,7 +15,6 @@ AO3:     'https://archiveofourown.org/blurryyou'
 github:      ''
 instagram:   ''
 facebook:    ''
->>>>>>> Stashed changes
 
 markdown:  kramdown
 permalink: pretty
