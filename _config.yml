@@ -1,25 +1,48 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Permalinks
-permalink:        pretty
+# Site settings
+title:       blurryyou
+email:       'blurry.you@gmail.com'
+description: ''
+baseurl:     '' # The subpath of your site, e.g. /blog
+url:         'https://blurryyou.github.io' # The base hostname & protocol for your site
+AO3:     'https://archiveofourown.org/blurryyou'
+github:      ''
+instagram:   ''
+facebook:    ''
 
-# Setup
-title:            blurryyou
-tagline:          'Learn the hard way'
-description:      'This site is powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <a href="http://pages.github.com" target="_blank">GitHub Pages</a>, theme from <a href="http://hyde.getpoole.com" target="_blank">Hyde</a>. '
-url:              http://blurryyou.github.io
-baseurl:          /
+markdown:  kramdown
+permalink: pretty
+paginate:  60
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+sass:
+  style: compressed
 
-paginate:         5
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
 
-# Custom vars
-version:          2.1.0
+include:
+  - _pages
 
-github:
-  repo:           https://github.com/poole/hyde
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
