@@ -9,7 +9,7 @@
 title:       blurryyou
 email:       'blurry.you@gmail.com'
 description: ''
-baseurl:     '/blog' # The subpath of your site, e.g. /blog
+baseurl:     '' # The subpath of your site, e.g. /blog
 url:         'https://blurryyou.github.io' # The base hostname & protocol for your site
 AO3:     'https://archiveofourown.org/blurryyou'
 github:      ''
