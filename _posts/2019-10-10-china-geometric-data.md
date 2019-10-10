@@ -1,6 +1,6 @@
 ---
 layout: post
-title: China's spatial data
+title: China geometric data
 featured: true
 tags: [visulization]
 ---
