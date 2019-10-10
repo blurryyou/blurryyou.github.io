@@ -43,7 +43,7 @@ Python 很多 lib 都支持地图绘制，像是 Pyecharts, Plotly.graph_objs, M
 
 [Geopandas](http://geopandas.org/) 是基于 [Matplotlib](http://matplotlib.org/) 进行绘图的，只是作为地图专精，所以方法更简单一些。二者都需要导入地理数据，因为 Matplotlib 需要地理数据来描绘地图的形状轮廓，然后把相关的数据可视化上去。
 
-我之前看过一篇知乎文章，里面举了十几个论文中的例子，说很多中国地图都是错的。
+我之前看过一篇[知乎文章，里面举了十几个论文中的例子，说很多中国地图都是错的](https://zhuanlan.zhihu.com/p/25634886)。
 
 我自己也用过 [GADM 的数据](https://gadm.org/data.html)来绘制中国省级地图，结果发现画出来的地图里没有台湾、香港和澳门。（我看不出来藏南之类的地方有没有问题。）
 
