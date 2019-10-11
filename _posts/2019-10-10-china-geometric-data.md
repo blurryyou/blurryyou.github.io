@@ -2,7 +2,7 @@
 layout: post
 title: China geometric data
 featured: true
-tags: [visulization]
+tags: [visualization]
 ---
 
 Sometimes, we need to combine the data with the geographic information, plotting choropleth maps, for example. 
