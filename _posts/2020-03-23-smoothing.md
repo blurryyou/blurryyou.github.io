@@ -15,11 +15,11 @@ tags: [coding]
 
 这份数据量相对比较大，做平滑的目的是从比较杂乱的线条中找到比较明显的趋势。
 
-![before_smoothing](/Users/happyelements/OneDrive/OneDrive - pku.edu.cn/Others/blurryyou.github.io/images/posts/image-20200323161109443.png)
+![before_smoothing](/images/posts/image-20200323161109443.png)
 
 `medfilt` 顾名思义就是填充中位数（medians filt），以此降低噪声。下图就是平滑后的效果。
 
-![image-20200323161703422](/Users/happyelements/OneDrive/OneDrive - pku.edu.cn/Others/blurryyou.github.io/images/posts/image-20200323161703422.png)
+![image-20200323161703422](/images/posts/image-20200323161703422.png)
 
 这个方法当时已经满足了 case 的需求。
 
@@ -29,15 +29,15 @@ tags: [coding]
 
 最近在处理的一套新数据，采用 `medfilt` 就不太合适。这份数据集的数据量噪音大的同时，数据量较小，数据并不连续。
 
-![before_smoothing](/Users/happyelements/Library/Application Support/typora-user-images/image-20200323162038247.png)
+![before_smoothing](/images/posts/image-20200323162038247.png)
 
 对这个数据集填充中位数进行平滑，导致了出现了如图所示的异常情况。
 
-![median_smoothing](/Users/happyelements/OneDrive/OneDrive - pku.edu.cn/Others/blurryyou.github.io/images/posts/image-20200323162334245.png)
+![median_smoothing](/images/posts/image-20200323162334245.png)
 
 重新思(stack)考(-overflow)了之后，尝试采用卷积平滑的方法。
 
-![sg_smoothing](/Users/happyelements/OneDrive/OneDrive - pku.edu.cn/Others/blurryyou.github.io/images/posts/image-20200323162744477.png)
+![sg_smoothing](/images/posts/image-20200323162744477.png)
 
 
 
